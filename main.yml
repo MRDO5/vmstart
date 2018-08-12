@@ -1,0 +1,18 @@
+---
+     - hosts: app
+       gather_facts: no
+       vars_files:
+         - [ "apache_{{ansible_distribution}}.yml", "apache_default.yml" ]
+
+       roles:
+         - bashcompletion
+         - vim
+         - ntp
+          
+
+       tasks:
+#         - service: name={{ apache }} state=started
+#         - name: Install Bash-completion
+#           yum: name=bash-completion state=present
+         - debug: var=ansible_eth0.ipv4.address
+

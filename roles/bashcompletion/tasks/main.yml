@@ -1,0 +1,8 @@
+---
+- name: Install Bash-completion
+  yum: name=bash-completion state=present
+  when: software_version.split('.')[0] == '1:2'
+  tags: bashcompletion
+
+
+...
