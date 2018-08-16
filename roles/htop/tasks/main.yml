@@ -1,0 +1,7 @@
+---
+- name: Install htop
+  yum: name=htop state=present
+  tags: htop
+
+...
+

@@ -1,0 +1,34 @@
+---
+- name: Install Docker-CE
+  get_url:
+    url: https://download.docker.com/linux/centos/docker-ce.repo
+    dest: /etc/yum.repos.d/docker-ce.repo
+    force: yes
+    owner: root
+    group: root
+    mode: 0644
+  tags: docker-ce
+
+- name: Install Docker-CE
+  yum: name=docker-ce state=present
+  update_cache: yes
+  tags: docker-ce
+
+- name: Start Docker-CE
+  service: name=docker state=started enabled=yes
+  tags: docker-ce
+
+
+
+#- name: Install Docker-CE
+#  shell: curl -sSL https://get.docker.com/ | sh
+#  register: dock
+#  changed_when: "'Warning:' not in dock.stdout"
+#  tags: docker-ce
+
+
+#- name: Disable Docker-CE-Edge repo
+#  command: yum-config-manager --disable docker-ce-edge
+#  tags: docker-ce-edge
+
+...

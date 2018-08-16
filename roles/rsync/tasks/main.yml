@@ -1,0 +1,7 @@
+---
+- name: Install rsync
+  yum: name=rsync state=present
+  tags: rsync
+
+...
+

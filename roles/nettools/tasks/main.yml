@@ -1,0 +1,7 @@
+---
+- name: Install nettools
+  yum: name=net-tools state=present
+  tags: nettools
+
+...
+

@@ -1,0 +1,11 @@
+---
+- name: Install epel repository
+  yum: name=epel-release state=present
+  tags: epel
+
+- name: Delete epel-testing repository
+  file: path=/etc/yum.repos.d/epel-testing.repo state=absent
+  tags: epeltest
+
+...
+

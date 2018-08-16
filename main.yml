@@ -1,18 +1,36 @@
 ---
-     - hosts: app
-       gather_facts: no
-       vars_files:
-         - [ "apache_{{ansible_distribution}}.yml", "apache_default.yml" ]
+     - hosts: db 
+       gather_facts: yes
+#       vars_files:
+#         - [ "apache_{{ansible_distribution}}.yml", "apache_default.yml" ]
 
        roles:
+         - epel
          - bashcompletion
          - vim
          - ntp
-          
+         - curl
+         - htop
+         - mc
+         - nettools
+         - rsync
+         - tmux
+         - tree
+         - ansible
+         - docker
+
 
        tasks:
+
 #         - service: name={{ apache }} state=started
 #         - name: Install Bash-completion
 #           yum: name=bash-completion state=present
-         - debug: var=ansible_eth0.ipv4.address
+#         - debug: var=ansible_eth0.ipv4.address
+
+         - name: echo test
+           command: echo "VM is ready"
+         - debug: var=ansible_eth0.ipv4.address var=hostname
+
+#          when: "'get-docker.sh' in  test.stdout"
+
 

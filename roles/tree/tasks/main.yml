@@ -1,0 +1,7 @@
+---
+- name: Install tree
+  yum: name=tree state=present
+  tags: tree
+
+...
+

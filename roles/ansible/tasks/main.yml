@@ -1,0 +1,11 @@
+---
+- name: Install ansible
+  yum: name=ansible state=present
+  tags: ansible
+
+- name: Check ansible version
+  command: ansible --version
+  tags: ansible
+
+...
+
