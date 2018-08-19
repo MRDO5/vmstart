@@ -2,6 +2,9 @@
 - name: Install ntp
   yum: name=ntp state=present
   tags: ntp
-  notify: restart ntpd
+
+- name: restart ntpd
+  service: name=ntpd state=restarted enabled=yes
+  tags: ntp
 
 ...
