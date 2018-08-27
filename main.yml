@@ -5,46 +5,47 @@
 #         - [ "apache_{{ansible_distribution}}.yml", "apache_default.yml" ]
 
        roles:
-         - epel
-         - bashcompletion
-         - vim
-         - ntp
-         - curl
-         - htop
-         - mc
-         - nettools
-         - rsync
-         - tmux
-         - tree
-         - ansible
-         - docker
+#         - epel
+#         - bashcompletion
+#         - vim
+#         - ntp
+#         - curl
+#         - htop
+#         - mc
+#         - nettools
+#         - rsync
+#         - tmux
+#         - tree
+#         - ansible
+#         - docker
+          - java8
+          - ansible-role-jenkins
 
-
-       tasks:
+#       tasks:
 
 #         - service: name={{ apache }} state=started
 #         - name: Install Bash-completion
 #           yum: name=bash-completion state=present
 #         - debug: var=ansible_eth0.ipv4.address
 
-         - name: echo test
-           command: echo "VM is ready"
-         - debug: var=ansible_all_ipv4_addresses, var=ansible_hostname
-           tags: debug
+#         - name: echo test
+#           command: echo "VM is ready"
+#         - debug: var=ansible_all_ipv4_addresses, var=ansible_hostname
+#           tags: debug
 
 #          when: "'get-docker.sh' in  test.stdout"
 
-         - name: Sending mail to Martin
-           local_action:
-             module:  mail
-             host: "127.0.0.1"
-             subject: "[Ansible] All tasks complated for mail_alert playbook"
-             body: "Hello, Ansible has done its job and its time for you to perform you duty"
-             from: "ansible@mysoft.com"
-             to: "martin.danielyan@acronis.com"
-             bcc: "mr.danielyan55@yahoo.com"
+#         - name: Sending mail to Martin
+#           local_action:
+#             module:  mail
+#             host: "127.0.0.1"
+#             subject: "[Ansible] All tasks complated for mail_alert playbook"
+#             body: "Hello, Ansible has done its job and its time for you to perform you duty"
+#             from: "ansible@mysoft.com"
+#            to: "martin.danielyan@acronis.com"
+#             bcc: "mr.danielyan55@yahoo.com"
 
-           notify: restart ntpd
+#           notify: restart ntpd
 
 
 
