@@ -6,20 +6,20 @@
 
        roles:
 #         - epel
-#         - bashcompletion
-#         - vim
-#         - ntp
-#         - curl
-#         - htop
-#         - mc
-#         - nettools
-#         - rsync
+         - bashcompletion
+         - vim
+         - ntp
+         - curl
+         - htop
+         - mc
+         - nettools
+         - rsync
 #         - tmux
 #         - tree
 #         - ansible
 #         - docker
-          - java8
-          - ansible-role-jenkins
+#         - java8
+#         - ansible-role-jenkins
 
 #       tasks:
 
@@ -46,7 +46,6 @@
 #             bcc: "mr.danielyan55@yahoo.com"
 
 #           notify: restart ntpd
-
 
 
 ...
