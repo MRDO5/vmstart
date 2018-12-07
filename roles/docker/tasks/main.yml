@@ -10,8 +10,8 @@
   tags: docker-ce
 
 - name: Install Docker-CE
-  yum: name=docker-ce state=present
-  update_cache: yes
+    yum: name=docker-ce state=present
+    update_cache: yes
   tags: docker-ce
 
 - name: Start Docker-CE

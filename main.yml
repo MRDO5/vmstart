@@ -1,5 +1,5 @@
 ---
-     - hosts: db 
+     - hosts: app 
        gather_facts: yes
 #       vars_files:
 #         - [ "apache_{{ansible_distribution}}.yml", "apache_default.yml" ]
@@ -9,15 +9,15 @@
          - bashcompletion
          - vim
          - ntp
-         - curl
-         - htop
-         - mc
-         - nettools
-         - rsync
+           # - curl
+           #- htop
+           #- mc
+           #- nettools
+           #- rsync
 #         - tmux
 #         - tree
 #         - ansible
-#         - docker
+         - docker
 #         - java8
 #         - ansible-role-jenkins
 
