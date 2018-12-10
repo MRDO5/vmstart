@@ -1,8 +1,9 @@
 # Application servers
 [app]
-192.168.88.105
-192.168.88.103
-centos3
+#192.168.88.105
+#192.168.88.103
+origin
+origin3
 
 
 # Database server

@@ -17,7 +17,7 @@
 #         - tmux
 #         - tree
 #         - ansible
-         - docker
+#         - docker
 #         - java8
 #         - ansible-role-jenkins
 

@@ -10,8 +10,8 @@
   tags: docker-ce
 
 - name: Install Docker-CE
-    yum: name=docker-ce state=present
-    update_cache: yes
+  yum: name=docker-ce state=present
+#  update_cache: yes
   tags: docker-ce
 
 - name: Start Docker-CE
@@ -25,7 +25,6 @@
 #  register: dock
 #  changed_when: "'Warning:' not in dock.stdout"
 #  tags: docker-ce
-
 
 #- name: Disable Docker-CE-Edge repo
 #  command: yum-config-manager --disable docker-ce-edge
