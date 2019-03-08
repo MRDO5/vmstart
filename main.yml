@@ -5,18 +5,18 @@
 #         - [ "apache_{{ansible_distribution}}.yml", "apache_default.yml" ]
 
        roles:
-#         - epel
+         - epel
          - bashcompletion
          - vim
          - ntp
-           # - curl
-           #- htop
-           #- mc
-           #- nettools
-           #- rsync
-#         - tmux
-#         - tree
-#         - ansible
+         - curl
+         - htop
+         - mc
+         - nettools
+         - rsync
+         - tmux
+         - tree
+         - ansible
 #         - docker
 #         - java8
 #         - ansible-role-jenkins

@@ -11,7 +11,7 @@
 
 - name: Install Docker-CE
   yum: name=docker-ce state=present
-#  update_cache: yes
+  #  update_cache: yes
   tags: docker-ce
 
 - name: Start Docker-CE
