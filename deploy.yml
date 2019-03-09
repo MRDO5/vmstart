@@ -1,6 +1,8 @@
 ---
-     - hosts: app 
+     - hosts: servers 
        gather_facts: yes
+       sudo: yes
+
 #       vars_files:
 #         - [ "apache_{{ansible_distribution}}.yml", "apache_default.yml" ]
 
@@ -16,7 +18,7 @@
          - rsync
          - tmux
          - tree
-         - ansible
+#         - ansible
 #         - docker
 #         - java8
 #         - ansible-role-jenkins
@@ -32,7 +34,6 @@
 #           command: echo "VM is ready"
 #         - debug: var=ansible_all_ipv4_addresses, var=ansible_hostname
 #           tags: debug
-
 #          when: "'get-docker.sh' in  test.stdout"
 
 #         - name: Sending mail to Martin
@@ -42,10 +43,8 @@
 #             subject: "[Ansible] All tasks complated for mail_alert playbook"
 #             body: "Hello, Ansible has done its job and its time for you to perform you duty"
 #             from: "ansible@mysoft.com"
-#            to: "martin.danielyan@acronis.com"
+#             to: "martin.danielyan@acronis.com"
 #             bcc: "mr.danielyan55@yahoo.com"
-
-#           notify: restart ntpd
 
 
 ...
