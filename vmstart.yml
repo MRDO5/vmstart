@@ -21,7 +21,6 @@
 #         - ansible
 #         - docker
 #         - java8
-#         - ansible-role-jenkins
 
 #       tasks:
 
